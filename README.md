@@ -37,25 +37,19 @@ Aqui conseguimos ver os atletas, sua idade, e para qual instituição pertence.
 
 Podemos utilizar os query params para mudar a lista, fazer filtros, etc..
 
-`GET /athlete/?age=20 - FORMATO DA RESPOSTA - STATUS 200`
+`GET /athlete/?age=20 - STATUS 200`</br>
+<span>Mostra todos os atletas com 20 anos.</span>
 
-<span>Obs: Mostra todos os atletas com 20 anos.</span>
+`GET /athlete/?_sort=name&_order=desc - STATUS 200`</br>
+<span>Mostra todos os atletas ordenado em ordem decrescente do nome.</span>
 
-```json
-[
-  {
-    "name": "José da Silva",
-    "age": 20,
-    "img": "https://imgs.search.brave.com/G4KDpFlyrJ0Jk1kz1LotjEp5nWfQZGuGDo-7tiJp25A/rs:fit:880:670:1/g:ce/aHR0cHM6Ly93d3cu/cGluY2xpcGFydC5j/b20vcGljZGlyL21p/ZGRsZS8xNTUtMTU1/OTMxNl9tYWxlLWF2/YXRhci1jbGlwYXJ0/LnBuZw",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in varius sapien. Fusce sagittis euismod enim, ac pellentesque ex sodales ac. Aliquam erat volutpat. Morbi faucibus lacus non elementum cursus. In mattis ante in nibh rhoncus vehicula. Praesent rutrum elit vel justo pharetra, a consequat felis varius. Donec ullamcorper nunc vel tortor consectetur vehicula. Morbi eros arcu, tincidunt gravida egestas sit amet, molestie id sem. Nullam ornare molestie urna, ut blandit leo commodo in. In congue interdum odio a elementum. Nam nec facilisis odio. Duis scelerisque tortor at felis placerat, at interdum ex maximus. Cras id commodo urna. Fusce et feugiat risus, vel fermentum dolor. Donec non ligula massa.",
-    "locality": "Rio de Janeiro - RJ",
-    "userId": "1",
-    "id": 1
-  }
-]
-```
+`GET /athlete/?_sort=name&_order=asc - STATUS 200`</br>
+<span>Mostra todos os atletas ordenado em ordem crescente do nome.</span>
 
-Para acessar um atleta específico:
+`GET /athlete/?_page=1&_limit=2 - STATUS 200`
+<span>Mostra 2 atletas da página 1</span>
+
+<p>Para acessar um atleta específico:</p>
 
 `GET /athlete/id - FORMATO DA RESPOSTA - STATUS 200`
 
@@ -193,7 +187,9 @@ Após o usuário estar logado, ele deve conseguir ver e fazer doações para os 
 
 `POTS /users/id/athlete - FORMATO DA REQUISIÇÃO`
 
-id -> somento o id do admin
+<span>É válido somente o id do admin</span>
+
+<blockquote>Na requisição apenas é necessário o TOKEN.</blockquote></br>
 
 `POST /users/id/athlete - FORMATO DA RESPOSTA - STATUS 201`
 
@@ -212,3 +208,58 @@ id -> somento o id do admin
 ```json
 {}
 ```
+
+`PATCH /athlete/1 - FORMATO DA REQUISIÇÃO` </br>
+
+<blockquote>Na requisição apenas é necessário o TOKEN</blockquote> </br>
+
+```json
+{
+  "age": 30
+}
+```
+
+`PATCH /athlete/1 - FORMATO DA RESPOSTA - STATUS 200` </br>
+
+```json
+{
+  "name": "José da Silva",
+  "age": 30,
+  "img": "https://imgs.search.brave.com/G4KDpFlyrJ0Jk1kz1LotjEp5nWfQZGuGDo-7tiJp25A/rs:fit:880:670:1/g:ce/aHR0cHM6Ly93d3cu/cGluY2xpcGFydC5j/b20vcGljZGlyL21p/ZGRsZS8xNTUtMTU1/OTMxNl9tYWxlLWF2/YXRhci1jbGlwYXJ0/LnBuZw",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in varius sapien. Fusce sagittis euismod enim, ac pellentesque ex sodales ac. Aliquam erat volutpat. Morbi faucibus lacus non elementum cursus. In mattis ante in nibh rhoncus vehicula. Praesent rutrum elit vel justo pharetra, a consequat felis varius. Donec ullamcorper nunc vel tortor consectetur vehicula. Morbi eros arcu, tincidunt gravida egestas sit amet, molestie id sem. Nullam ornare molestie urna, ut blandit leo commodo in. In congue interdum odio a elementum. Nam nec facilisis odio. Duis scelerisque tortor at felis placerat, at interdum ex maximus. Cras id commodo urna. Fusce et feugiat risus, vel fermentum dolor. Donec non ligula massa.",
+  "locality": "Rio de Janeiro - RJ",
+  "userId": "1",
+  "id": 1
+}
+```
+
+`PUT /athlete/1 - FORMATO DA REQUISIÇÃO` </br>
+
+<blockquote>Na requisição apenas é necessário o TOKEN, e no body é necessário passar o id do admin (o "dono" do atleta)</blockquote></br>
+
+```json
+{
+  "name": "José da Silva",
+  "age": 20,
+  "img": "https://imgs.search.brave.com/G4KDpFlyrJ0Jk1kz1LotjEp5nWfQZGuGDo-7tiJp25A/rs:fit:880:670:1/g:ce/aHR0cHM6Ly93d3cu/cGluY2xpcGFydC5j/b20vcGljZGlyL21p/ZGRsZS8xNTUtMTU1/OTMxNl9tYWxlLWF2/YXRhci1jbGlwYXJ0/LnBuZw",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in varius sapien. Fusce sagittis euismod enim, ac pellentesque ex sodales ac. Aliquam erat volutpat. Morbi faucibus lacus non elementum cursus. In mattis ante in nibh rhoncus vehicula. Praesent rutrum elit vel justo pharetra, a consequat felis varius. Donec ullamcorper nunc vel tortor consectetur vehicula. Morbi eros arcu, tincidunt gravida egestas sit amet, molestie id sem. Nullam ornare molestie urna, ut blandit leo commodo in. In congue interdum odio a elementum. Nam nec facilisis odio. Duis scelerisque tortor at felis placerat, at interdum ex maximus. Cras id commodo urna. Fusce et feugiat risus, vel fermentum dolor. Donec non ligula massa.",
+  "locality": "São Paulo - SP",
+  "userId": "1"
+}
+```
+
+`PUT /athlete/1 - FORMATO DA RESPOSTA - STATUS 200` </br>
+
+```json
+{
+  "name": "José da Silva",
+  "age": 20,
+  "img": "https://imgs.search.brave.com/G4KDpFlyrJ0Jk1kz1LotjEp5nWfQZGuGDo-7tiJp25A/rs:fit:880:670:1/g:ce/aHR0cHM6Ly93d3cu/cGluY2xpcGFydC5j/b20vcGljZGlyL21p/ZGRsZS8xNTUtMTU1/OTMxNl9tYWxlLWF2/YXRhci1jbGlwYXJ0/LnBuZw",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in varius sapien. Fusce sagittis euismod enim, ac pellentesque ex sodales ac. Aliquam erat volutpat. Morbi faucibus lacus non elementum cursus. In mattis ante in nibh rhoncus vehicula. Praesent rutrum elit vel justo pharetra, a consequat felis varius. Donec ullamcorper nunc vel tortor consectetur vehicula. Morbi eros arcu, tincidunt gravida egestas sit amet, molestie id sem. Nullam ornare molestie urna, ut blandit leo commodo in. In congue interdum odio a elementum. Nam nec facilisis odio. Duis scelerisque tortor at felis placerat, at interdum ex maximus. Cras id commodo urna. Fusce et feugiat risus, vel fermentum dolor. Donec non ligula massa.",
+  "locality": "São Paulo - SP",
+  "userId": "1",
+  "id": 1
+}
+```
+
+<p>Feito com carinho ♥</p>
