@@ -12,5 +12,12 @@
       "id": 2
     }
   ],
-  "athlete": []
+  "athlete": [
+    {
+      "name": "joao2",
+      "age": 25,
+      "userId": "1",
+      "id": 1
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-01-03T13:43:24.115Z",
+  "__export_date": "2023-01-03T19:56:20.351Z",
   "__export_source": "insomnia.desktop.app:v2022.7.0",
   "resources": [
     {
@@ -48,6 +48,66 @@
       "description": "",
       "scope": "collection",
       "_type": "workspace"
+    },
+    {
+      "_id": "req_b9c0061473d94b5c84d14b76dcfd578f",
+      "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
+      "modified": 1672775757618,
+      "created": 1672775106367,
+      "url": "{{ _.baseUrl }}/athlete/1",
+      "name": "updatePatch",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"age\":30\n\t\n\t\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}",
+        "disabled": false
+      },
+      "metaSortKey": -1672751714288.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_72205d353f9044c7a80c2a4ceeea9131",
+      "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
+      "modified": 1672775762639,
+      "created": 1672775620407,
+      "url": "{{ _.baseUrl }}/athlete/1",
+      "name": "UpdatePut",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"joao2\",\n\t\"age\": 25,\n\t\"userId\": \"1\"\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "disabled": false,
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1672751714282.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
     },
     {
       "_id": "req_25cb28a18a82460fb1b1c81653e39125",
@@ -194,9 +254,9 @@
     {
       "_id": "req_8500b7b7632645769b3eeb0b568818da",
       "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "modified": 1672753217613,
+      "modified": 1672775131409,
       "created": 1672746891112,
-      "url": "{{ _.baseUrl }}/login",
+      "url": "{{ _.baseUrl }}/login/1",
       "name": "Login",
       "description": "",
       "method": "POST",
@@ -278,7 +338,7 @@
     {
       "_id": "env_dd533d4e521a454985fb2b2175d2720c",
       "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
-      "modified": 1672753375580,
+      "modified": 1672775078642,
       "created": 1672746906732,
       "name": "Dev",
       "data": { "baseUrl": "http://localhost:3001" },
@@ -291,7 +351,7 @@
     {
       "_id": "env_cb5b75c0ea4f4518a71e712135edbc18",
       "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
-      "modified": 1672753197298,
+      "modified": 1672775078643,
       "created": 1672753170009,
       "name": "Prod",
       "data": {
@@ -301,6 +361,19 @@
       "color": "#e71313",
       "isPrivate": false,
       "metaSortKey": 1672753170009,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_a33479b9d32b49119871cafeec4a76da",
+      "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
+      "modified": 1672775078644,
+      "created": 1672768221654,
+      "name": "Dev (Copy)",
+      "data": { "baseUrl": "http://localhost:3001" },
+      "dataPropertyOrder": { "&": ["baseUrl"] },
+      "color": "#351fdb",
+      "isPrivate": false,
+      "metaSortKey": 1672750038370.5,
       "_type": "environment"
     }
   ]
