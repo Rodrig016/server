@@ -10,7 +10,7 @@ Este é o JSON-Server Fake-API da aplicação Patrocine um atleta - Uma aplicaç
 
 A API tem um total de 4 endpoints, login, registe, users, athlete.
 
-<a href="https://insomnia.rest/run/?label=Patrocine%20um%20Atleta&uri=https%3A%2F%2Fjson-server-fakeapi-adoteumatleta.onrender.com%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+<a href="https://insomnia.rest/run/?label=Patrocine%20um%20Atleta&uri=https%3A%2F%2Fgithub.com%2FAnderson-Keller%2Fjson-server-base-Adote-um-Atleta%2Fblob%2Fmaster%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
 A url base da API é https://json-server-fakeapi-adoteumatleta.onrender.com
 
@@ -43,7 +43,8 @@ Podemos utilizar os query params para mudar a lista, fazer filtros, etc..
 <span>Obs: Mostra todos os atletas com 20 anos.</span>
 
 ```json
-{
+[
+  {
   "name": "José",
   "lastname": "da Silva",
   "age": 20,
@@ -52,8 +53,11 @@ Podemos utilizar os query params para mudar a lista, fazer filtros, etc..
   "locality": "Rio de Janeiro - RJ",
   "userId": "1",
   "id": 1
-}
-...
+  }
+  .
+  .
+  .
+]
 ```
 
 Para acessar um atleta específico:
@@ -70,5 +74,18 @@ Para acessar um atleta específico:
   "locality": "Rio de Janeiro - RJ",
   "userId": "1",
   "id": 1
+}
+```
+
+<h2 align ='center'> Criação de usuário </h2>
+
+`POST /register - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "email": "exemplo@email.com",
+  "password": "123456",
+  "name": "João",
+  "lastname": "da Silva"
 }
 ```
