@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-01-03T19:56:20.351Z",
+  "__export_date": "2023-01-06T18:42:56.113Z",
   "__export_source": "insomnia.desktop.app:v2022.7.0",
   "resources": [
     {
@@ -52,7 +52,7 @@
     {
       "_id": "req_b9c0061473d94b5c84d14b76dcfd578f",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672775757618,
+      "modified": 1672940989690,
       "created": 1672775106367,
       "url": "{{ _.baseUrl }}/athlete/1",
       "name": "updatePatch",
@@ -82,7 +82,7 @@
     {
       "_id": "req_72205d353f9044c7a80c2a4ceeea9131",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672775762639,
+      "modified": 1672940988811,
       "created": 1672775620407,
       "url": "{{ _.baseUrl }}/athlete/1",
       "name": "UpdatePut",
@@ -161,7 +161,7 @@
     {
       "_id": "req_89f2a814acce4ee6a3b3ac6f2755cf69",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672753335032,
+      "modified": 1673030481377,
       "created": 1672751714201,
       "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/athlete",
       "name": "CraeteAthlete",
@@ -169,7 +169,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\n\t\"name\":\"joao2\",\n\t\"age\":20\n\t\n\t\n}"
+        "text": "{\n\"name\":\"joao2\",\n\"age\":20\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
