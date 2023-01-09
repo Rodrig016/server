@@ -1,15 +1,56 @@
 {
   "users": [
     {
+      "name": "admin",
       "email": "admin@email.com",
       "password": "$2a$10$X6Qyabkl6urEAc7w2N7ND.3go3CmgHpZttFiTmWF54esfPf8GZB/a",
       "id": 1,
       "isAdmin": true
     },
+
     {
-      "email": "teste@email.com",
-      "password": "$2a$10$JbbB81rdX8MUnfaOOcfVBuK0UeMoWEm03S7W.Y0Yk93Ef63UFgeJ.",
-      "id": 2
+      "email": "teste2@email.com",
+      "password": "$2a$10$dnY5xOf9GenkK01eUEixde/Ga7FUKb6RtsVdQXHtKzXB9Nq3CeASC",
+      "name": "teste",
+      "cpf": "9000000677099",
+      "dateOfBirth": "12/10/1993",
+      "street": "rua qualquer",
+      "city": "São Paulo-SP",
+      "cep": "96000000",
+      "bio": "olá munod",
+      "imgUrl": "link",
+      "phone": "9989912399",
+      "id": 3
+    },
+    {
+      "email": "teste3@email.com",
+      "password": "$2a$10$sM97XeJOSle/9bpV8vnuFOS5sRd1L/6bsGn5CAyqsWwk/jAAdIyJu",
+      "name": "teste",
+      "cpf": "9000000677099",
+      "dateOfBirth": "12/10/1993",
+      "street": "rua qualquer",
+      "city": "São Paulo-SP",
+      "cep": "96000000",
+      "bio": "olá munod",
+      "imgUrl": "link",
+      "phone": "9989912399",
+      "id": 4
+    },
+    {
+      "email": "teste4@email.com",
+      "password": "$2a$10$KwcTO7FLH.GLNXf/vGY5eermc7XjKcdG21nqchdtRmK2u39wc9rae",
+      "name": "teste",
+      "cpf": "9000000677099",
+      "dateOfBirth": "12/10/1993",
+      "street": "rua qualquer",
+      "city": "São Paulo-SP",
+      "cep": "96000000",
+      "bio": "olá munod",
+      "imgUrl": "link",
+      "phone": "9989912399",
+      "favorites": [],
+      "sponsored": [],
+      "id": 5
     }
   ],
   "athlete": [
@@ -18,6 +59,41 @@
       "age": 25,
       "userId": "1",
       "id": 1
+    },
+    {
+      "name": "joao2",
+      "age": 20,
+      "nickname": "joaozinho",
+      "imgUrl": "https://www.google.com.br",
+      "bio": "jovem atletla promissor",
+      "city": "São Paulo",
+      "userId": "1",
+      "id": 2
+    },
+    {
+      "name": "joao2",
+      "age": 20,
+      "nickname": "joaozinho",
+      "imgUrl": "https://www.google.com.br",
+      "bio": "jovem atletla promissor",
+      "city": "São Paulo",
+      "midias": [],
+      "tournaments": [],
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "name": "joao2",
+      "age": 20,
+      "nickname": "joaozinho",
+      "imgUrl": "https://www.google.com.br",
+      "bio": "jovem atletla promissor",
+      "city": "São Paulo",
+      "midias": [],
+      "tournaments": [],
+      "donates": [],
+      "userId": "1",
+      "id": 4
     }
   ]
 }
