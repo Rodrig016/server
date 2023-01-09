@@ -1,7 +1,7 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-01-06T18:42:56.113Z",
+  "__export_date": "2023-01-09T13:03:59.887Z",
   "__export_source": "insomnia.desktop.app:v2022.7.0",
   "resources": [
     {
@@ -52,7 +52,7 @@
     {
       "_id": "req_b9c0061473d94b5c84d14b76dcfd578f",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672940989690,
+      "modified": 1672775757618,
       "created": 1672775106367,
       "url": "{{ _.baseUrl }}/athlete/1",
       "name": "updatePatch",
@@ -82,7 +82,7 @@
     {
       "_id": "req_72205d353f9044c7a80c2a4ceeea9131",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672940988811,
+      "modified": 1672775762639,
       "created": 1672775620407,
       "url": "{{ _.baseUrl }}/athlete/1",
       "name": "UpdatePut",
@@ -138,9 +138,9 @@
     {
       "_id": "req_49f8fa80700747999ac1145e3cbe7548",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672753238596,
+      "modified": 1673008152859,
       "created": 1672751896781,
-      "url": "{{ _.baseUrl }}/athlete/",
+      "url": "{{ _.baseUrl }}/athlete",
       "name": "GetAll",
       "description": "",
       "method": "GET",
@@ -161,7 +161,7 @@
     {
       "_id": "req_89f2a814acce4ee6a3b3ac6f2755cf69",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1673030481377,
+      "modified": 1673267106501,
       "created": 1672751714201,
       "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/athlete",
       "name": "CraeteAthlete",
@@ -169,7 +169,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\"name\":\"joao2\",\n\"age\":20\n}"
+        "text": "{\n\t\n\t\"name\":\"joao2\",\n\t\"age\":20,\n\t\"nickname\":\"joaozinho\",\n\t\"imgUrl\":\"https://www.google.com.br\",\n\t\"bio\":\"jovem atletla promissor\",\n\t\"city\":\"São Paulo\",\n\t\"midias\":[],\n\t\"tournaments\":[],\n\t\"donates\":[]\n\t\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -254,9 +254,9 @@
     {
       "_id": "req_8500b7b7632645769b3eeb0b568818da",
       "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "modified": 1672775131409,
+      "modified": 1672940050691,
       "created": 1672746891112,
-      "url": "{{ _.baseUrl }}/login/1",
+      "url": "{{ _.baseUrl }}/login",
       "name": "Login",
       "description": "",
       "method": "POST",
@@ -280,7 +280,7 @@
     {
       "_id": "req_e1e397a84c13401fb58f92aa90ff4b2b",
       "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "modified": 1672753251886,
+      "modified": 1673267698007,
       "created": 1672748748864,
       "url": "{{ _.baseUrl }}/register",
       "name": "Register",
@@ -288,7 +288,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\n\t\"email\":\"teste@email.com\",\n\t\"password\":\"123456\"\n\t\n}"
+        "text": "{\n\t\"name\":\"teste\",\n\t\"cpf\":\"9000000677099\",\n\t\"dateOfBirth\":\"12/10/1993\",\n\t\"street\":\"rua qualquer\",\n\t\"city\":\"São Paulo-SP\",\n\t\"cep\":\"96000000\",\n\t\"bio\":\"olá munod\",\n\t\"imgUrl\":\"link\",\n\t\"phone\":\"9989912399\",\n\n\t\"email\":\"teste4@email.com\",\n\t\"password\":\"123456\",\n\t\"favorites\":[],\n\t\"sponsored\":[]\n\t\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -304,7 +304,7 @@
       "_type": "request"
     },
     {
-      "_id": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
+      "_id": "env_1f4ef5508e189a4ba0a86c3d93f5a24837a76f5c",
       "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
       "modified": 1672746888383,
       "created": 1672746888383,
@@ -337,7 +337,7 @@
     },
     {
       "_id": "env_dd533d4e521a454985fb2b2175d2720c",
-      "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
+      "parentId": "env_1f4ef5508e189a4ba0a86c3d93f5a24837a76f5c",
       "modified": 1672775078642,
       "created": 1672746906732,
       "name": "Dev",
@@ -350,7 +350,7 @@
     },
     {
       "_id": "env_cb5b75c0ea4f4518a71e712135edbc18",
-      "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
+      "parentId": "env_1f4ef5508e189a4ba0a86c3d93f5a24837a76f5c",
       "modified": 1672775078643,
       "created": 1672753170009,
       "name": "Prod",
@@ -365,7 +365,7 @@
     },
     {
       "_id": "env_a33479b9d32b49119871cafeec4a76da",
-      "parentId": "env_6254a5e30358007ce25a71168e02401afbb8dfb7",
+      "parentId": "env_1f4ef5508e189a4ba0a86c3d93f5a24837a76f5c",
       "modified": 1672775078644,
       "created": 1672768221654,
       "name": "Dev (Copy)",
