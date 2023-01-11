@@ -210,5 +210,39 @@
       "userId": "1",
       "id": 6
     }
+  ],
+  "donates": [
+    {
+      "athleteId": 1,
+      "amount": 2000,
+      "userId": "6",
+      "id": 1
+    }
+  ],
+  "deposition": [
+    {
+      "athleteId": 1,
+      "content": "Muito bom jogador, excelente",
+      "userId": "6",
+      "id": 1
+    }
+  ],
+  "tournament": [
+    {
+      "name": "Copa Super",
+      "location": "curitiba",
+      "date": "2022-10-22",
+      "status": "Participando",
+      "imgUrl": "https://www.arapongas.pr.gov.br/imagens/noticias/cd8829a4698911806c146aba621f59ef.jpg",
+      "participants": [
+        {
+          "athleteId": 1
+        }
+      ],
+      "rewards": "700",
+      "place": "5",
+      "userId": "1",
+      "id": 1
+    }
   ]
 }
