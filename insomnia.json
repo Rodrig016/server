@@ -1,9 +1,142 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2023-01-09T13:03:59.887Z",
-  "__export_source": "insomnia.desktop.app:v2022.7.0",
+  "__export_date": "2023-01-11T20:53:22.541Z",
+  "__export_source": "insomnia.desktop.app:v2022.7.1",
   "resources": [
+    {
+      "_id": "req_5bc03d29d09f494384b1cbe93ff347a6",
+      "parentId": "fld_63826b7a513c402cb4d62f636d37d25e",
+      "modified": 1673470084413,
+      "created": 1673469738995,
+      "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/tournament",
+      "name": "CreateTournament",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Copa Super\",\n\t\"location\": \"curitiba\",\n\t\"date\": \"2022-10-22\",\n\t\"status\": \"Participando\",\n\t\"imgUrl\": \"https://www.arapongas.pr.gov.br/imagens/noticias/cd8829a4698911806c146aba621f59ef.jpg\",\n\t\"participants\": [\n\t\t{\n\t\t\t\"athleteId\":1\n\t\t}\n\t],\n\t\"rewards\": \"700\",\n\t\"place\": \"5\"\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1673469738995,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_63826b7a513c402cb4d62f636d37d25e",
+      "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
+      "modified": 1673469737470,
+      "created": 1673469737470,
+      "name": "Tournament",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1673469737470,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_ccfacc43c62e421fb921d564e8beafac",
+      "parentId": null,
+      "modified": 1672746888377,
+      "created": 1672746888377,
+      "name": "adoteUmAtleta",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_64128655fe434d32b4a180d26aaf30a9",
+      "parentId": "fld_a452d3142aaf46d897726587f44ab320",
+      "modified": 1673469657063,
+      "created": 1673469523944,
+      "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/deposition",
+      "name": "CreateDeposition",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"athleteId\":1,\n\t\"content\":\"Muito bom jogador, excelente\"\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1673469523944,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a452d3142aaf46d897726587f44ab320",
+      "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
+      "modified": 1673469522805,
+      "created": 1673469522805,
+      "name": "deposition",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1673469522805,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1a77e7f910194e3a8f012f510d212e04",
+      "parentId": "fld_265d6f65cc64434f8bc17d7f72c04855",
+      "modified": 1673469402995,
+      "created": 1673469243598,
+      "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/donates",
+      "name": "CreateDonate",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"athleteId\":1,\n\t\"amount\":2000\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1673469243598,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_265d6f65cc64434f8bc17d7f72c04855",
+      "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
+      "modified": 1673469241942,
+      "created": 1673469241942,
+      "name": "donates",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1673469241942,
+      "_type": "request_group"
+    },
     {
       "_id": "req_6afe0a71912048f5b92f4e9cfb8bf448",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
@@ -40,27 +173,17 @@
       "_type": "request_group"
     },
     {
-      "_id": "wrk_ccfacc43c62e421fb921d564e8beafac",
-      "parentId": null,
-      "modified": 1672746888377,
-      "created": 1672746888377,
-      "name": "adoteUmAtleta",
-      "description": "",
-      "scope": "collection",
-      "_type": "workspace"
-    },
-    {
       "_id": "req_b9c0061473d94b5c84d14b76dcfd578f",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672775757618,
+      "modified": 1673443731048,
       "created": 1672775106367,
-      "url": "{{ _.baseUrl }}/athlete/1",
+      "url": "{{ _.baseUrl }}/athlete/3",
       "name": "updatePatch",
       "description": "",
       "method": "PATCH",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"age\":30\n\t\n\t\n}"
+        "text": "{\n\t\"donates\": [\n\t\t{\n\t\t\t\"amount\": 200,\n\t\t\t\"owner\":\"6\"\n\t\t}\n\t]\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -112,9 +235,9 @@
     {
       "_id": "req_25cb28a18a82460fb1b1c81653e39125",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1672753242551,
+      "modified": 1673443213663,
       "created": 1672751994678,
-      "url": "{{ _.baseUrl }}/athlete/{% response 'body', 'req_6afe0a71912048f5b92f4e9cfb8bf448', 'b64::JC5pZA==::46b', 'never', 60 %}",
+      "url": "{{ _.baseUrl }}/athlete/9",
       "name": "Delete",
       "description": "",
       "method": "DELETE",
@@ -138,7 +261,7 @@
     {
       "_id": "req_49f8fa80700747999ac1145e3cbe7548",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1673008152859,
+      "modified": 1673307858689,
       "created": 1672751896781,
       "url": "{{ _.baseUrl }}/athlete",
       "name": "GetAll",
@@ -147,7 +270,11 @@
       "body": {},
       "parameters": [],
       "headers": [],
-      "authentication": {},
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}",
+        "disabled": false
+      },
       "metaSortKey": -1672751714251,
       "isPrivate": false,
       "settingStoreCookies": true,
@@ -161,7 +288,7 @@
     {
       "_id": "req_89f2a814acce4ee6a3b3ac6f2755cf69",
       "parentId": "fld_3a82578bd5e14f4dabe623af2ad6bf05",
-      "modified": 1673267106501,
+      "modified": 1673465238606,
       "created": 1672751714201,
       "url": "{{ _.baseUrl }}/users/{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC51c2VyLmlk::46b', 'never', 60 %}/athlete",
       "name": "CraeteAthlete",
@@ -169,7 +296,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\n\t\"name\":\"joao2\",\n\t\"age\":20,\n\t\"nickname\":\"joaozinho\",\n\t\"imgUrl\":\"https://www.google.com.br\",\n\t\"bio\":\"jovem atletla promissor\",\n\t\"city\":\"São Paulo\",\n\t\"midias\":[],\n\t\"tournaments\":[],\n\t\"donates\":[]\n\t\n}"
+        "text": "{\n\t\t\"name\": \"Joselito\",\n\t\t\"age\": \"1996-12-15\",\n\t\t\"nickname\": \"Litinho\",\n\t\t\"imgUrl\": \"https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnl[…]MPEIAG117-FILEDIMAGE-e1668729389935.jpg?w=876&h=484&crop=1\",\n\t\t\"bio\": \"Não sei quem sou\",\n\t\t\"city\": \"São Paulo - SP\",\n\t\t\"medias\": {\n\t\t\t\"twitter\": \"\",\n\t\t\t\"instagram\": \"\",\n\t\t\t\"facebook\": \"\"\n\t\t},\n\t\t\"tournaments\": [],\n\t\t\"donations\": [],\n\t\t\"depositions\": [],\n\t\t\"userId\": \"1\",\n\t\t\"id\": 2\n\t}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
@@ -186,6 +313,47 @@
       "settingRebuildPath": true,
       "settingFollowRedirects": "global",
       "_type": "request"
+    },
+    {
+      "_id": "req_8812a8bef6494796a1ad8075f7fc1f61",
+      "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
+      "modified": 1673466782212,
+      "created": 1673300789943,
+      "url": "{{ _.baseUrl }}/users/1",
+      "name": "Update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"site\": \"patrocineumatlete.com\",\n\t\"phone\": \"(21) 2563-9685\",\n\t\"street\": \"Rua Osvaldo Aranha, 1045\",\n\t\"city\": \"Brasília, Destrito Federal – DF\",\n\t\"cep\": \"73100-120\",\n\t\"cnpj\": \"54.070.554/0001-94\",\n\t\"bio\": \"Lorem ipsum libero ullamcorper vestibulum ornare tristique porta a ad vulputate, etiam litora erat mollis diam purus cursus curae venenatis, elementum nulla himenaeos.\",\n\t\"name\": \"Jogando pelo futuro\",\n\t\"tournaments\": [\n\t\t{\n\t\t\t\"name\": \"Copa amadora\",\n\t\t\t\"location\": \"São Paulo\",\n\t\t\t\"date\": \"2022\",\n\t\t\t\"status\": \"Participando\",\n\t\t\t\"imgUrl\": \"https://www.arapongas.pr.gov.br/imagens/noticias/cd8829a4698911806c146aba621f59ef.jpg\",\n\t\t\t\"participants\": [\n\t\t\t\t{\n\t\t\"name\": \"Joselito\",\n\t\t\"age\": \"1996-12-15\",\n\t\t\"nickname\": \"Litinho\",\n\t\t\"imgUrl\": \"https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnl[…]MPEIAG117-FILEDIMAGE-e1668729389935.jpg?w=876&h=484&crop=1\",\n\t\t\"bio\": \"Não sei quem sou\",\n\t\t\"city\": \"São Paulo - SP\",\n\t\t\"medias\": {\n\t\t\t\"twitter\": \"\",\n\t\t\t\"instagram\": \"\",\n\t\t\t\"facebook\": \"\"\n\t\t},\n\t\t\"tournaments\": [],\n\t\t\"donations\": [],\n\t\t\"depositions\": [],\n\t\t\"userId\": \"1\",\n\t\t\"id\": 2\n\t}\n\t\t\t],\n\t\t\t\"rewards\": \"700\",\n\t\t\t\"place\": \"5\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"Copa jr\",\n\t\t\t\"location\": \"Rio de Janeiro\",\n\t\t\t\"date\": \"2023\",\n\t\t\t\"status\": \"Participando\",\n\t\t\t\"imgUrl\": \"https://lirp.cdn-website.com/8cde6a41/dms3rep/multi/opt/Torneio-960w.png\",\n\t\t\t\"participants\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ronaldo gaucho\",\n\t\t\t\t\t\"age\": 20,\n\t\t\t\t\t\"nickname\": \"R10\",\n\t\t\t\t\t\"imgUrl\": \"https://www.google.com.br\",\n\t\t\t\t\t\"bio\": \"jovem atletla promissor\",\n\t\t\t\t\t\"city\": \"São Paulo\",\n\t\t\t\t\t\"medias\": [],\n\t\t\t\t\t\"tournaments\": [],\n\t\t\t\t\t\"depositions\": [],\n\t\t\t\t\t\"donations\": [],\n\t\t\t\t\t\"userId\": \"1\",\n\t\t\t\t\t\"id\": 1\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"rewards\": \"500\",\n\t\t\t\"place\": \"20\"\n\t\t}\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {
+        "type": "bearer",
+        "token": "{% response 'body', 'req_8500b7b7632645769b3eeb0b568818da', 'b64::JC5hY2Nlc3NUb2tlbg==::46b', 'never', 60 %}"
+      },
+      "metaSortKey": -1672748802326,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a0e3833cdf9d4b2d8266101621aa9635",
+      "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
+      "modified": 1672748855488,
+      "created": 1672748855488,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1672748855488,
+      "_type": "request_group"
     },
     {
       "_id": "req_636e8820c07d4b648bd4bbc0b07fba0a",
@@ -212,18 +380,6 @@
       "settingRebuildPath": true,
       "settingFollowRedirects": "global",
       "_type": "request"
-    },
-    {
-      "_id": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "parentId": "wrk_ccfacc43c62e421fb921d564e8beafac",
-      "modified": 1672748855488,
-      "created": 1672748855488,
-      "name": "User",
-      "description": "",
-      "environment": {},
-      "environmentPropertyOrder": null,
-      "metaSortKey": -1672748855488,
-      "_type": "request_group"
     },
     {
       "_id": "req_699e38d19d3f4134a30b25de52080b9b",
@@ -254,7 +410,7 @@
     {
       "_id": "req_8500b7b7632645769b3eeb0b568818da",
       "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "modified": 1672940050691,
+      "modified": 1673469856690,
       "created": 1672746891112,
       "url": "{{ _.baseUrl }}/login",
       "name": "Login",
@@ -280,7 +436,7 @@
     {
       "_id": "req_e1e397a84c13401fb58f92aa90ff4b2b",
       "parentId": "fld_a0e3833cdf9d4b2d8266101621aa9635",
-      "modified": 1673267698007,
+      "modified": 1673353730823,
       "created": 1672748748864,
       "url": "{{ _.baseUrl }}/register",
       "name": "Register",
@@ -288,7 +444,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n\t\"name\":\"teste\",\n\t\"cpf\":\"9000000677099\",\n\t\"dateOfBirth\":\"12/10/1993\",\n\t\"street\":\"rua qualquer\",\n\t\"city\":\"São Paulo-SP\",\n\t\"cep\":\"96000000\",\n\t\"bio\":\"olá munod\",\n\t\"imgUrl\":\"link\",\n\t\"phone\":\"9989912399\",\n\n\t\"email\":\"teste4@email.com\",\n\t\"password\":\"123456\",\n\t\"favorites\":[],\n\t\"sponsored\":[]\n\t\n}"
+        "text": "{\n\t\"name\":\"anderson\",\n\t\"cpf\":\"9000000677099\",\n\t\"dateOfBirth\":\"12/10/1993\",\n\t\"street\":\"rua qualquer\",\n\t\"city\":\"São Paulo-SP\",\n\t\"cep\":\"96000000\",\n\t\"bio\":\"olá munod\",\n\t\"imgUrl\":\"link\",\n\t\"phone\":\"9989912399\",\n\n\t\"email\":\"anderson@email.com\",\n\t\"password\":\"123456\",\n\t\"favorites\":[],\n\t\"sponsored\":[]\n\t\n}"
       },
       "parameters": [],
       "headers": [{ "name": "Content-Type", "value": "application/json" }],
