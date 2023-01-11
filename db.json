@@ -104,99 +104,48 @@
   ],
   "athlete": [
     {
-      "name": "joao2",
-      "age": 20,
-      "nickname": "joaozinho",
-      "imgUrl": "https://tntsports.com.br/__export/1661539002069/sites/esporteinterativo/img/2022/08/26/cristiano-ronaldo-cr76-gettyimages-1417091696.jpg_346598833.jpg",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "userId": "1",
-      "id": 3
-    },
-    {
-      "name": "joao2",
-      "age": 20,
-      "nickname": "joaozinho",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "donates": [],
-      "userId": "1",
-      "id": 4
-    },
-    {
-      "name": "joao23",
-      "age": 20,
-      "nickname": "joaozinho23",
-      "imgUrl": "https://www.lance.com.br/files/article_main/uploads/2022/12/10/6394d9fe6bd13.jpeg",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "donates": [],
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "name": "ronaldo",
-      "age": 20,
-      "nickname": "joaozinho23",
-      "imgUrl": "https://apostas.gazetaesportiva.com/static/wp/2022/10/imagem-destaque-cristiano-ronaldo-3.webp",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "donates": [],
-      "userId": "1",
-      "id": 6
-    },
-    {
       "name": "ronaldo gaucho",
       "age": 20,
       "nickname": "R10",
-      "imgUrl": "https://s.yimg.com/ny/api/res/1.2/G5laCskKv9SLnrZ3pTcL1A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2022-12/09643810-78b5-11ed-9ffd-a86fd4b544f9",
+      "imgUrl": "https://www.google.com.br",
       "bio": "jovem atletla promissor",
       "city": "São Paulo",
+      "midias": [],
+      "tournaments": [],
+      "donates": [],
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "name": "ronaldo",
+      "age": 18,
+      "nickname": "Ronaldo",
+      "imgUrl": "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltde65fd28ccd80b20/637fbab1678f637cf694af04/Cristiano_Ronaldo_Portugal_2022.jpg",
+      "bio": "jovem atletla promissor",
+      "city": "São Paulo",
+      "midias": [],
+      "tournaments": [],
+      "donates": [],
+      "userId": "1",
+      "id": 2
+    },
+    {
+      "name": "cristiano",
+      "age": 18,
+      "nickname": "CR7",
+      "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/Reuters_Direct_Media/BrazilOnlineReportSportsNews/tagreuters.com2022binary_LYNXMPEIAG117-FILEDIMAGE-e1668729389935.jpg?w=876&h=484&crop=1",
+      "bio": "jovem atletla promissor",
+      "city": "Maceio",
       "midias": [],
       "tournaments": [],
       "donates": [
         {
           "amount": 200,
-          "owner": "1"
+          "owner": "6"
         }
       ],
       "userId": "1",
-      "id": 7
-    },
-    {
-      "name": "ronaldo gaucho",
-      "age": 20,
-      "nickname": "R10",
-      "imgUrl": "https://www.google.com.br",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "donates": [],
-      "userId": "1",
-      "id": 8
-    },
-    {
-      "name": "ronaldo gaucho",
-      "age": 20,
-      "nickname": "R10",
-      "imgUrl": "https://www.google.com.br",
-      "bio": "jovem atletla promissor",
-      "city": "São Paulo",
-      "midias": [],
-      "tournaments": [],
-      "donates": [],
-      "userId": "6",
-      "id": 9
+      "id": 3
     }
   ]
 }
