@@ -10,18 +10,13 @@ app.db = router.db;
 
 const rules = auth.rewriter({
   users: 664,
-  athlete: 664,
-  donates: 664,
-  deposition: 664,
-  tournament: 664,
 });
 
 app.use(cors());
 app.use(rules);
 app.use(auth);
 app.use(router);
-app.listen(port);
+// app.listen(port);
 
-console.log("Server is running on port:", port);
-
+app.listen(port, () => console.log("Server is running on port:", port));
 /* A senha do admin é 123456 */
